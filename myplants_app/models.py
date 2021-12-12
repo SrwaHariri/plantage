@@ -3,14 +3,12 @@ from django.db import models
 
 class PlantType(models.Model):
     title = models.CharField(max_length=200)
-    
-
+     
     def __str__(self):
         return self.title
-    
+ 
     class Meta:
         ordering = ['-id']
-
 
 class Plant (models.Model):
     name = models.CharField(max_length=200)
@@ -25,7 +23,7 @@ class Plant (models.Model):
         return str(self.name)+"|"+self.planttype.title
 
 
-class Seed (models.Model):
+class Seed(models.Model):
     name = models.CharField(max_length=200)
     plant = models.ForeignKey(Plant, on_delete=models.CASCADE)
     price = models.FloatField()

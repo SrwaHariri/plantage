@@ -14,10 +14,10 @@ class PlantTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = PlantType
         fields = "__all__"
-
+      
 
 class SeedSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = PlantType
+        model = Seed
         fields = "__all__"
